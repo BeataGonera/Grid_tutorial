@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using CSS Grid</title>
+	<style>
+		body{
+			color: #fff;
+			font-family: 'Nunito Semibold';
+			text-align: center;
+		}
+
+		#content{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: minmax(100px, auto);
+			grid-gap: 10px;
+			grid-template-areas: 
+			"header header header header"
+			"aside main main main"
+			"aside main main main"
+			"section main main main"
+			"section main main main"
+			"nav nav nav nav"
+			"footer footer footer footer";
+			max-width: 960px;
+			margin: 0 auto;
+			color: #fff;
+			
+		}
+
+		#content> *{
+			background-color: lightseagreen;
+			color: #fff;
+			padding: 20px;
+			font-size: 24px;
+		}
+
+		header{
+			grid-area: header;
+		}
+
+		main{
+			grid-area: main;
+		}
+
+		section{
+			grid-area: section;
+		}
+
+		nav{
+			grid-area: nav;
+		}
+
+		footer{
+			grid-area: footer;
+		}
+
+		aside{
+			grid-area: aside;
+		}
+
+
+		
+	</style>
+</head>
+
+<body>
+
+	<div id="content">
+
+		<header>Header</header>
+		<main>Main</main>
+		<aside>Aside</aside>
+		<section>Section</section>
+		<nav>Nav</nav>
+		<footer>Footer</footer>
+
+	</div>
+</body>
+</html>
